@@ -31,6 +31,7 @@ api.scoreLoaded.on((score) => {
   score.tracks.forEach((track) => {
     trackList.appendChild(createTrackItem(track));
   });
+  console.log(score);
 });
 
 api.scoreLoaded.on((score) => {
@@ -99,9 +100,7 @@ layout.onchange = () => {
   api.render();
 };
 
-const playPause = wrapper.querySelector(
-  ".at-controls .at-player-play-pause"
-);
+const playPause = wrapper.querySelector(".at-controls .at-player-play-pause");
 playPause.onclick = (e) => {
   if (e.target.classList.contains("disabled")) {
     return;
@@ -132,3 +131,28 @@ api.playerStateChanged.on((e) => {
     icon.classList.add("fa-play");
   }
 });
+
+const speed = wrapper.querySelector(".at-controls .at-speed select");
+speed.onchange = () => {
+  api.playbackSpeed = speed.value;
+  console.log(speed.value);
+};
+
+
+const openFile = wrapper.querySelector(".at-controls .at-open-file");
+openFile.onclick = (e) => {
+  inputFile.click();
+};
+
+const inputFile = wrapper.querySelector(".at-controls .at-open-file input");
+inputFile.onchange = (e) => {
+  const file = event.target.files[0];
+  if (file) {
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+      api.load(e.target.result, [0]);
+    };
+    fileReader.readAsArrayBuffer(file);
+  }
+};
+
