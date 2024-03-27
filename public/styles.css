@@ -39,7 +39,6 @@ body {
 .at-sidebar {
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
   max-width: 70px;
   width: auto;
@@ -47,7 +46,6 @@ body {
   align-content: stretch;
   z-index: 1001;
   overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
   background: #313244;
   color: #cdd6f4;
 }
@@ -66,7 +64,7 @@ body {
   cursor: pointer;
 }
 .at-track:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: #45475a;
 }
 .at-track > .at-track-icon,
 .at-track > .at-track-details {
@@ -78,21 +76,18 @@ body {
   color: #cdd6f4;
   flex-shrink: 0;
   font-size: 32px;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.2s;
-  width: 64px;
+  width: 50px;
   height: 64px;
-  margin-right: 5px;
+  margin-right: 20px;
   align-items: center;
 }
 .at-track-name {
   margin-bottom: 5px;
 }
-.at-track:hover > .at-track-icon {
-  opacity: 0.8;
-}
 .at-track.active {
-  background: #45475a;
+  background: #6c7086;
 }
 .at-track.active > .at-track-icon {
   color: #a6e3a1;
@@ -141,7 +136,6 @@ body {
 }
 .at-controls select {
   border: none;
-  width: 100%;
   background: #313244;
   margin: 0px 5px;
   color: #fff;
