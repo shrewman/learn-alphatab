@@ -1,6 +1,14 @@
 const wrapper = document.querySelector(".at-wrap");
 const main = wrapper.querySelector(".at-main");
-const settings = { file: "./songs/gnr.gp4" };
+const settings = {
+  file: "./songs/gnr.gp4",
+  player: {
+    enablePlayer: true,
+    soundFont:
+      "https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2",
+    scrollElement: wrapper.querySelector(".at-viewport"),
+  },
+};
 const api = new alphaTab.AlphaTabApi(main, settings);
 
 function createTrackItem(track) {
@@ -25,9 +33,9 @@ api.scoreLoaded.on((score) => {
   });
 });
 
-api.scoreLoaded.on((score)=>{
-  wrapper.querySelector('.at-song-title').innerText = score.title;
-  wrapper.querySelector('.at-song-artist').innerText = score.artist;
+api.scoreLoaded.on((score) => {
+  console.log(score);
+  wrapper.querySelector(".at-song-title").innerText = score.title;
 });
 
 api.renderStarted.on(() => {
@@ -46,47 +54,81 @@ api.renderStarted.on(() => {
   });
 });
 
-const countIn = wrapper.querySelector('.at-controls .at-count-in');
+const countIn = wrapper.querySelector(".at-controls .at-count-in");
 countIn.onclick = () => {
-  countIn.classList.toggle('active');
-  if (countIn.classList.contains('active')) {
+  countIn.classList.toggle("active");
+  if (countIn.classList.contains("active")) {
     api.countInVolume = 1;
   } else {
     api.countInVolume = 0;
   }
 };
 
-const metronome = wrapper.querySelector('.at-controls .at-metronome');
+const metronome = wrapper.querySelector(".at-controls .at-metronome");
 metronome.onclick = () => {
-  metronome.classList.toggle('active');
-  if (metronome.classList.contains('active')) {
+  metronome.classList.toggle("active");
+  if (metronome.classList.contains("active")) {
     api.metronomeVolume = 1;
   } else {
     api.metronomeVolume = 0;
   }
 };
 
-const loop = wrapper.querySelector('.at-controls .at-loop');
+const loop = wrapper.querySelector(".at-controls .at-loop");
 loop.onclick = () => {
-  loop.classList.toggle('active');
-  api.isLooping = loop.classList.contains('active');
+  loop.classList.toggle("active");
+  api.isLooping = loop.classList.contains("active");
 };
 
-const zoom = wrapper.querySelector('.at-controls .at-zoom select');
-zoom.onchange = ()=>{
+const zoom = wrapper.querySelector(".at-controls .at-zoom select");
+zoom.onchange = () => {
   const zoomLevel = parseInt(zoom.value) / 100;
   api.settings.display.scale = zoomLevel;
   api.updateSettings();
   api.render();
 };
 
-const layout = wrapper.querySelector('.at-controls .at-layout select');
+const layout = wrapper.querySelector(".at-controls .at-layout select");
 layout.onchange = () => {
-  if (layout.value === 'horizontal') {
-      api.settings.display.layoutMode = alphaTab.LayoutMode.Horizontal;
-  } else if (layout.value === 'page') {
-      api.settings.display.layoutMode = alphaTab.LayoutMode.Page;
+  if (layout.value === "horizontal") {
+    api.settings.display.layoutMode = alphaTab.LayoutMode.Horizontal;
+  } else if (layout.value === "page") {
+    api.settings.display.layoutMode = alphaTab.LayoutMode.Page;
   }
   api.updateSettings();
   api.render();
 };
+
+const playPause = wrapper.querySelector(
+  ".at-controls .at-player-play-pause"
+);
+playPause.onclick = (e) => {
+  if (e.target.classList.contains("disabled")) {
+    return;
+  }
+  api.playPause();
+};
+
+const stop = wrapper.querySelector(".at-controls .at-player-stop");
+stop.onclick = (e) => {
+  if (e.target.classList.contains("disabled")) {
+    return;
+  }
+  api.stop();
+};
+
+api.playerReady.on(() => {
+  playPause.classList.remove("disabled");
+  stop.classList.remove("disabled");
+});
+
+api.playerStateChanged.on((e) => {
+  const icon = playPause.querySelector("i.fas");
+  if (e.state === alphaTab.synth.PlayerState.Playing) {
+    icon.classList.remove("fa-play");
+    icon.classList.add("fa-pause");
+  } else {
+    icon.classList.remove("fa-pause");
+    icon.classList.add("fa-play");
+  }
+});

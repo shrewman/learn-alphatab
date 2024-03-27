@@ -19,9 +19,6 @@
 
   <body>
     <div class="at-wrap">
-      <div class="at-overlay">
-        <div class="at-overlay-content">Music sheet is loading</div>
-      </div>
       <div class="at-content">
         <div class="at-sidebar">
           <div class="at-sidebar-content">
@@ -34,9 +31,15 @@
       </div>
       <div class="at-controls">
         <div class="at-controls-left">
+          <a class="btn at-player-stop disabled">
+            <i class="fas fa-step-backward"></i>
+          </a>
+          <a class="btn at-player-play-pause disabled">
+            <i class="fas fa-play"></i>
+          </a>
+          <span class="at-player-progress">0%</span>
           <div class="at-song-info">
-            <span class="at-song-title"></span> -
-            <span class="at-song-artist"></span>
+            <span class="at-song-title"></span>
           </div>
         </div>
         <div class="at-controls-right">

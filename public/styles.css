@@ -91,7 +91,7 @@ body {
   opacity: 0.8;
 }
 .at-track.active {
-  background: rgba(0, 0, 0, 0.1);
+  background: #45475a;
 }
 .at-track.active > .at-track-icon {
   color: #a6e3a1;
@@ -159,4 +159,28 @@ body {
 
 .at-song-title {
   margin-left: 10px;
+}
+
+.at-controls .btn.disabled {
+  cursor: auto;
+  opacity: 0.5;
+}
+
+.at-cursor-bar {
+  background: #f9e2af44;
+}
+
+.at-selection div {
+  background:	#df8e1d55;
+}
+
+.at-cursor-beat {
+  background: #89b4fa;
+  background: 	#7287fd;
+  width: 3px;
+}
+
+.at-highlight * {
+  fill: #e64553;
+  stroke: #e64553;
 }
