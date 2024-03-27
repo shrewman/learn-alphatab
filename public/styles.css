@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+button {
+  border: none;
+}
+
 .at-wrap {
   height: 100vh;
   margin: 0 auto;
@@ -95,6 +99,13 @@ body {
 }
 .at-track > .at-track-name {
   font-weight: 500;
+}
+
+.at-track-details > .at-track-controls > .mute.active {
+  background: #e64553;
+}
+.at-track-details > .at-track-controls > .solo.active {
+  background: #40a02b;
 }
 
 .at-controls {

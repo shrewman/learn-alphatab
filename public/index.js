@@ -21,6 +21,38 @@ function createTrackItem(track) {
     e.stopPropagation();
     api.renderTracks([track]);
   };
+
+  const mute = trackItem.querySelector(".at-track-controls .mute");
+  mute.onclick = (e) => {
+    e.stopPropagation();
+    if (mute.classList.contains("active")) {
+      api.changeTrackMute([track], false);
+      mute.classList.remove("active");
+    } else {
+      api.changeTrackMute([track], true);
+      mute.classList.add("active");
+    }
+  };
+
+  const solo = trackItem.querySelector(".at-track-controls .solo");
+  solo.onclick = (e) => {
+    e.stopPropagation();
+    if (solo.classList.contains("active")) {
+      api.changeTrackSolo([track], false);
+      solo.classList.remove("active");
+    } else {
+      api.changeTrackSolo([track], true);
+      solo.classList.add("active");
+    }
+  };
+
+  const trackVolume = trackItem.querySelector(".at-track-volume");
+  trackVolume.onchange = (e) => {
+    e.stopPropagation();
+    const volume = e.target.value;
+    api.changeTrackVolume([track], volume);
+  };
+
   return trackItem;
 }
 
@@ -31,11 +63,9 @@ api.scoreLoaded.on((score) => {
   score.tracks.forEach((track) => {
     trackList.appendChild(createTrackItem(track));
   });
-  console.log(score);
 });
 
 api.scoreLoaded.on((score) => {
-  console.log(score);
   wrapper.querySelector(".at-song-title").innerText = score.title;
 });
 
@@ -138,7 +168,6 @@ speed.onchange = () => {
   console.log(speed.value);
 };
 
-
 const openFile = wrapper.querySelector(".at-controls .at-open-file");
 openFile.onclick = (e) => {
   inputFile.click();
@@ -155,4 +184,3 @@ inputFile.onchange = (e) => {
     fileReader.readAsArrayBuffer(file);
   }
 };
-
