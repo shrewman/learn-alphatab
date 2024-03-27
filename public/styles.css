@@ -1,12 +1,13 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  padding: 0;
+  margin: 0;
 }
 
 .at-wrap {
-  height: 98vh;
+  height: 100vh;
   margin: 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -101,7 +102,6 @@ body {
   font-weight: 500;
 }
 
-/** Footer **/
 .at-controls {
   flex: 0 0 auto;
   display: flex;
@@ -109,13 +109,13 @@ body {
   background: #313244;
   color: #fff;
 }
-.at-controls>div {
+.at-controls > div {
   display: flex;
   justify-content: flex-start;
   align-content: center;
   align-items: center;
 }
-.at-controls>div>* {
+.at-controls > div > * {
   display: flex;
   text-align: center;
   align-items: center;
@@ -133,32 +133,26 @@ body {
   font-size: 16px;
 }
 .at-controls a.active {
-  background:	#585b70;
+  background: #585b70;
   text-decoration: none;
 }
 .at-controls .btn i {
   vertical-align: top;
 }
 .at-controls select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   border: none;
   width: 100%;
-  height: 40px;
   background: #313244;
-  padding: 4px 10px;
+  margin: 0px 5px;
   color: #fff;
-  font-size: 16px;
-  text-align-last: center;
+  font-size: 18px;
   text-align: center;
-  -ms-text-align-last: center;
-  -moz-text-align-last: center;
   cursor: pointer;
 }
 
 .at-song-title {
   margin-left: 10px;
+  cursor: default;
 }
 
 .at-controls .btn.disabled {
@@ -171,12 +165,12 @@ body {
 }
 
 .at-selection div {
-  background:	#df8e1d55;
+  background: #df8e1d55;
 }
 
 .at-cursor-beat {
   background: #89b4fa;
-  background: 	#7287fd;
+  background: #7287fd;
   width: 3px;
 }
 
