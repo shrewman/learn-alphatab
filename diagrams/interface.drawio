@@ -1,9 +1,33 @@
-<mxfile host="app.diagrams.net" modified="2024-03-28T23:37:13.653Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0" version="24.2.0" etag="wP48cuX-ZtKS20KJ1RB-" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-28T23:43:04.765Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="97Gyeq2JzgKEQH__xx8W" version="24.2.0" type="github">
   <diagram name="Page-1" id="rBbyUFg14Vklbam004l9">
-    <mxGraphModel>
+    <mxGraphModel dx="887" dy="633" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sJqRduYRJuIplfR8ntnb-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="sJqRduYRJuIplfR8ntnb-1" target="sJqRduYRJuIplfR8ntnb-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-1" value="Веб-додаток" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="170" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-3" value="Музична нотація" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="256" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-5" value="Бокова панель з треками" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-38" y="256" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-6" value="&lt;div&gt;Нижня панель&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="318" y="256" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-9" value="Трек 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-38" y="323" width="120" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-11" value="Трек 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-38" y="356" width="120" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sJqRduYRJuIplfR8ntnb-12" value="Трек n" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-38" y="389" width="120" height="23" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
