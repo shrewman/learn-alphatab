@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-28T23:51:51.173Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="zD5DdeHJihfyE88tvvBz" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-28T23:57:24.169Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="eeUw5nvRbAxuxh4MbXLz" version="24.2.0" type="github">
   <diagram name="Page-1" id="rBbyUFg14Vklbam004l9">
     <mxGraphModel dx="1083" dy="364" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -18,6 +18,22 @@
         </mxCell>
         <mxCell id="sJqRduYRJuIplfR8ntnb-1" value="Веб-додаток" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="170" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UoxIEsNDT_erJ6ihOWLR-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJqRduYRJuIplfR8ntnb-3" target="UoxIEsNDT_erJ6ihOWLR-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="290" />
+              <mxPoint x="280" y="353" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UoxIEsNDT_erJ6ihOWLR-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJqRduYRJuIplfR8ntnb-3" target="UoxIEsNDT_erJ6ihOWLR-57">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="291" />
+              <mxPoint x="280" y="397" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="sJqRduYRJuIplfR8ntnb-3" value="Музична нотація" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="263" width="120" height="50" as="geometry" />
@@ -63,6 +79,18 @@
         </mxCell>
         <mxCell id="UoxIEsNDT_erJ6ihOWLR-18" value="Соло" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-207" y="402" width="120" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="UoxIEsNDT_erJ6ihOWLR-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="373" as="sourcePoint" />
+            <mxPoint x="200" y="373" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UoxIEsNDT_erJ6ihOWLR-55" value="Зміна позиції курсору" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="338" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UoxIEsNDT_erJ6ihOWLR-57" value="Вибір фрагменту пісні" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="382" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
